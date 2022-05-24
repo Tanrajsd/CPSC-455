@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: darkgreen;
+  padding: 50px;
+}
+
+.navOptions {
+  text-decoration: none;
+  color: white;
+}
