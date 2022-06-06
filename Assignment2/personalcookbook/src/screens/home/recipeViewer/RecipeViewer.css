@@ -1,0 +1,54 @@
+.form-label {
+  color: white;
+  text-align: center;
+}
+
+.form-button {
+  width: 150px;
+  height: 30px;
+  background-color: #014500;
+  color: white;
+  border: none;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+.form-button:hover {
+  background-color: #015900;
+}
+
+.viewer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #348233;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #014500;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recipe-card:hover {
+  border: solid;
+  border-color: white;
+}
+
+.recipe-text {
+  font-weight: 500;
+  color: white;
+}
