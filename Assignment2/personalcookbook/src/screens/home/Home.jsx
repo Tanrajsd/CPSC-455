@@ -12,9 +12,9 @@ export default function Home() {
 
   const recipes = useSelector((state) => state.recipeReducer);
 
-  const openPopUp = (e) => {
+  const openPopUp = (recipeId) => {
     setPopUpOpen(true);
-    seteSlectedRecipe(e.target.id);
+    seteSlectedRecipe(recipeId);
   };
 
   const closePopUp = () => {

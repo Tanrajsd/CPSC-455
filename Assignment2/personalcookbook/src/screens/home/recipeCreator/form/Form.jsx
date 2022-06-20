@@ -11,7 +11,7 @@ export default function Form({
   return (
     <div>
       <form id="form">
-        <label for="rname" className="form-label">
+        <label htmlFor="rname" className="form-label">
           Recipe Name:
         </label>
         <br />
@@ -27,7 +27,7 @@ export default function Form({
         />
         <br />
         <br />
-        <label for="ringredients" className="form-label">
+        <label htmlFor="ringredients" className="form-label">
           Ingredients:
         </label>
         <br />
@@ -42,7 +42,7 @@ export default function Form({
         />
         <br />
         <br />
-        <label for="rinstructions" className="form-label">
+        <label htmlFor="rinstructions" className="form-label">
           Instructions:
         </label>
         <br />

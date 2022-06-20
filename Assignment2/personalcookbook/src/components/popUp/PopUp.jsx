@@ -1,8 +1,7 @@
 import React from "react";
 import "./PopUp.css";
 
-export default function PopUp({ recipe, closePopUp }) {
-  console.log(recipe);
+export default function PopUp({ closePopUp, recipe }) {
   return (
     <div className="popUp-container">
       <div id={recipe.id} className="pop-up-card">
