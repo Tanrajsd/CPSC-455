@@ -29,7 +29,7 @@ const deleteRecipe = async (id) => {
     method: "DELETE",
   });
   const data = await response.json();
-  return data.recipes;
+  return data?.recipes;
 };
 
 export default {

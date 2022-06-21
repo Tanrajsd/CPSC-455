@@ -34,6 +34,7 @@ router.delete("/:id", function (req, res, next) {
     newList = recipeList.filter((recipe) => {
       return recipe.id !== req.params.id;
     });
+    recipeList = newList;
   } catch (err) {
     res
       .status(400)
