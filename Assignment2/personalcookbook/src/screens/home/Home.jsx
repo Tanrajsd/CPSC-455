@@ -10,7 +10,7 @@ export default function Home() {
   const [popUpOpen, setPopUpOpen] = useState(false);
   const [selectedRecipe, seteSlectedRecipe] = useState("");
 
-  const recipes = useSelector((state) => state.recipeReducer);
+  const recipes = useSelector((state) => state.recipes.list);
 
   const openPopUp = (recipeId) => {
     setPopUpOpen(true);

@@ -2,7 +2,8 @@ const getRecipes = async () => {
   const response = await fetch("http://localhost:3001/recipe", {
     method: "GET",
   });
-  return response.json();
+  const data = await response.json();
+  return data.recipes;
 };
 
 const addRecipe = async (recipe) => {
@@ -20,14 +21,15 @@ const addRecipe = async (recipe) => {
     throw new Error(errorMsg);
   }
 
-  return data;
+  return data?.recipe;
 };
 
 const deleteRecipe = async (id) => {
   const response = await fetch(`http://localhost:3001/recipe/${id}`, {
     method: "DELETE",
   });
-  return response.json();
+  const data = await response.json();
+  return data.recipes;
 };
 
 export default {
