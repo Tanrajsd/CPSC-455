@@ -7,7 +7,7 @@ import {
 import "./RecipeViewer.css";
 
 export default function RecipeViewer({ openPopUp }) {
-  const recipes = useSelector((state) => state.recipe.list);
+  const recipes = useSelector((state) => state.recipes.list);
   const dispatch = useDispatch();
 
   const removeRecipe = (id) => {
