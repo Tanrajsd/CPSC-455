@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { remove } from "../../../actions/index";
+import {
+  deleteRecipeAsync,
+  getRecipesAsync,
+} from "../../../redux/recipe/thunks";
 import "./RecipeViewer.css";
 
 export default function RecipeViewer({ openPopUp }) {
-  const recipes = useSelector((state) => state.recipeReducer);
+  const recipes = useSelector((state) => state.recipes.list);
   const dispatch = useDispatch();
 
   const removeRecipe = (id) => {
-    dispatch(remove(id));
+    dispatch(deleteRecipeAsync(id));
   };
+
+  useEffect(() => {
+    dispatch(getRecipesAsync());
+  }, []);
 
   return (
     <div>

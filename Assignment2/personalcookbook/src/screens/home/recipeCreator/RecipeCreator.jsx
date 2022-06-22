@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Form from "./form/Form";
-import { add } from "../../../actions/index";
+import { addRecipeAsync } from "../../../redux/recipe/thunks";
 import "./RecipeCreator.css";
 
 export default function RecipeCreator() {
@@ -30,7 +30,7 @@ export default function RecipeCreator() {
       ingredients: ingredients,
       instructions: instructions,
     };
-    dispatch(add(recipe));
+    dispatch(addRecipeAsync(recipe));
     clearNewRecipe();
   };
 

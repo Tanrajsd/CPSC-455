@@ -1,15 +1,11 @@
 import React, { useState } from "react";
+import login from "./useAuth";
 
 export default function Login() {
-  const password = "open sesame";
   const [attempt, setAttempt] = useState("");
 
-  const signIn = () => {
-    if (attempt === password) {
-      window.location.href = "/home";
-    } else {
-      alert("Password is incorrect please try again!");
-    }
+  const signIn = (attempt) => {
+    login(attempt);
   };
 
   return (
@@ -32,7 +28,7 @@ export default function Login() {
         <div>
           <button
             onClick={() => {
-              signIn();
+              signIn(attempt);
             }}
             className="form-button"
           >
