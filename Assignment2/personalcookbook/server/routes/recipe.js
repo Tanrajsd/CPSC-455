@@ -24,10 +24,7 @@ router.delete("/:id", async function (req, res, next) {
   let newList = [];
   try {
     await Recipe.deleteOne({ name: req.params.id });
-    // newList = recipeList.filter((recipe) => {
-    //   return recipe.id !== req.params.id;
-    // });
-    // recipeList = newList;
+    newList = await Recipe.find({}, { _id: 0, __v: 0 });
   } catch (err) {
     res
       .status(400)
