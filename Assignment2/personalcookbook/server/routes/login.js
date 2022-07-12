@@ -1,10 +1,12 @@
 var express = require("express");
+const User = require("../models/userModel");
 var router = express.Router();
 
-const password = "open sesame";
+router.post("/", async function (req, res, next) {
+  const users = await User.find({}, { _id: 0, __v: 0 });
+  const user = users[0];
 
-router.post("/", function (req, res, next) {
-  if (req.body.password === password) {
+  if (req.body.password === user.password) {
     res.send({ message: "Login successful", valid: true });
     return;
   } else {

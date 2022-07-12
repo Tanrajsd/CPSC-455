@@ -7,9 +7,16 @@ var cors = require("cors");
 var indexRouter = require("./routes/index");
 var recipeRouter = require("./routes/recipe");
 var loginRouter = require("./routes/login");
-// const mongoose = require("mongoose");
+const mongoose = require("mongoose");
+
+const generateData = require("./generate-data");
+const Recipe = require("./models/recipeModel");
 
 var app = express();
+
+mongoose.connect(
+  "mongodb+srv://tanraj:Tangradetwo@cluster0.y5s6z.mongodb.net/CPSC455?retryWrites=true&w=majority"
+);
 
 app.use(logger("dev"));
 app.use(cors());
