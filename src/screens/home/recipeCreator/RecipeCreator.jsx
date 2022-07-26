@@ -44,6 +44,7 @@ export default function RecipeCreator() {
     setName(" ");
     setIngredients(" ");
     setInstructions(" ");
+    setTime(" ");
   };
 
   return (
