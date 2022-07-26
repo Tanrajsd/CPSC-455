@@ -30,6 +30,7 @@ export default function RecipeViewer({ openPopUp }) {
                 <p className="recipe-text">
                   Ingredients: {recipe.ingredients}{" "}
                 </p>
+                <p className="recipe-text">Time To Create: {recipe.time} </p>
                 <button
                   onClick={(e) => {
                     openPopUp(e.target.id);

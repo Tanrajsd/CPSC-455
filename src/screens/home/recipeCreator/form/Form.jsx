@@ -7,6 +7,7 @@ export default function Form({
   changeIngredients,
   instructions,
   changeInstructions,
+  changeTime,
 }) {
   return (
     <div>
@@ -54,6 +55,22 @@ export default function Form({
             changeInstructions(e.target.value);
           }}
           value={instructions}
+        />
+        <br />
+        <br />
+        <label htmlFor="rname" className="form-label">
+          Time To Create:
+        </label>
+        <br />
+        <input
+          type="text"
+          id="rtime"
+          name="rtime"
+          className="form-input"
+          onChange={(e) => {
+            changeTime(e.target.value);
+          }}
+          value={name}
         />
       </form>
     </div>

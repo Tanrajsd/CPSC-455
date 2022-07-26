@@ -8,6 +8,7 @@ export default function RecipeCreator() {
   const [name, setName] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
+  const [time, setTime] = useState("");
 
   const dispatch = useDispatch();
 
@@ -23,12 +24,17 @@ export default function RecipeCreator() {
     setInstructions(value);
   };
 
+  const changeTime = (value) => {
+    setTime(value);
+  };
+
   const addNewRecipe = () => {
     const recipe = {
       id: name,
       name: name,
       ingredients: ingredients,
       instructions: instructions,
+      time: time,
     };
     dispatch(addRecipeAsync(recipe));
     clearNewRecipe();
