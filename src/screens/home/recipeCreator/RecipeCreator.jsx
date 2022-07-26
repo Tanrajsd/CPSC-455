@@ -57,6 +57,7 @@ export default function RecipeCreator() {
           changeIngredients={changeIngredients}
           instructions={instructions}
           changeInstructions={changeInstructions}
+          time={time}
           changeTime={changeTime}
         />
         <br />

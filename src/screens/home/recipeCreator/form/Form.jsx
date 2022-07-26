@@ -7,6 +7,7 @@ export default function Form({
   changeIngredients,
   instructions,
   changeInstructions,
+  time,
   changeTime,
 }) {
   return (
@@ -70,7 +71,7 @@ export default function Form({
           onChange={(e) => {
             changeTime(e.target.value);
           }}
-          value={name}
+          value={time}
         />
       </form>
     </div>
