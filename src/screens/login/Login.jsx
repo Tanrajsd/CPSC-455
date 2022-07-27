@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <div>
       <div id="form" className="form-container">
-        <h3 className="form-header">Password</h3>
+        <h3 className="form-header">Enter Password Here</h3>
         <div>
           <input
             type="text"
