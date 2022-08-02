@@ -1,11 +1,9 @@
 const getRecipes = async () => {
-  const response = await fetch(
-    "https://cpsc455-personalcookbook-api.herokuapp.com/recipe",
-    {
-      method: "GET",
-    }
-  );
+  const response = await fetch("https://server-a5.herokuapp.com/recipes", {
+    method: "GET",
+  });
   const data = await response.json();
+  console.log(data);
   return data.recipes;
 };
 
